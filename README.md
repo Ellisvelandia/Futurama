@@ -50,10 +50,15 @@
 ![Yarn](https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white)
 ---
 
-# Configuración:
+## Configuración:
 ```
  Abre una consola, muevete al directorio del proyecto y entra a /app/, dentro de app corre:
-
+ 
+ *desde el comando git clone https://github.com/Ellisvelandia/Futurama.git en Git Bash Here inicia el proyecto
+ 
+ *Ingresa con el comando code a visual studio code
+ 
  *ejecute yarn tanto en el cliente como en el servidor para iniciar la aplicación
- *ejecuta del lado del server yarn start y yarn dev del lado client        
+ 
+ *ejecuta del lado del server yarn start y yarn dev del lado client para mostrar el contenido de la app       
 ```
