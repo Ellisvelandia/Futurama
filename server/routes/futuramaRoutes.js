@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const futuramaModel = require("../models/futuramaModel.js");
+const futuramaModel = require("../models/futuramaModel");
 
 router.post("/add", async (req, res) => {
   try {

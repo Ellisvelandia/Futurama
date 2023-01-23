@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const futuramaRoute = require("./routes/futuramaRoutes.js");
+const futuramaRoute = require("./routes/futuramaRoutes");
 require('dotenv').config();
 
 require("./connection/conn")
