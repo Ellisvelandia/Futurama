@@ -9,7 +9,7 @@ const Episode = () => {
   useEffect(() => {
     const getCast = async () => {
       const res = await axios.get(
-        "http://localhost:8080/api/v1//getEpisode"
+        "https://futurama.onrender.com/api/v1//getEpisode"
       );
       setEpisodes(res.data.episodes)
     };
