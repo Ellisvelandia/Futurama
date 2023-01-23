@@ -75,7 +75,8 @@
     width="80"     
  />
     <p style="float:left; width: 20%;">
-Copyright © Ellis velandia caicedo, 2023
+     Anhelo recuerdes tu infancia 
+      © Ellis velandia caicedo, 2023
 </p>
 </p>
 </footer>
