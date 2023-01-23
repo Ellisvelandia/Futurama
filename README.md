@@ -65,5 +65,17 @@
    <img
     src="https://user-images.githubusercontent.com/100318892/214067484-43523fe5-2dfb-4ce4-9147-0ce1f5c31464.png"
     width="600"
-    height="250"
+    height="300"
   />
+--
+  <footer>
+
+<img style="border-width:0" src="https://purepng.com/public/uploads/large/purepng.com-futurama-logofuturamaanimationsciencefictioncartoon-1701528604196ar57s.png"
+    height="80"
+    width="80"     
+ />
+    <p style="float:left; width: 20%;">
+Copyright © Ellis velandia caicedo, 2023
+</p>
+</p>
+</footer>
