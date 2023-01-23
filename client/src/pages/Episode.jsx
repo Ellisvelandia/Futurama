@@ -9,9 +9,9 @@ const Episode = () => {
   useEffect(() => {
     const getCast = async () => {
       const res = await axios.get(
-        "https://api.sampleapis.com/futurama/episodes"
+        "http://localhost:1001/api/v1/getEpisode"
       );
-      setEpisodes(res.data.slice(0, 20));
+      setEpisodes(res.data.episodes)
     };
 
     getCast();
@@ -19,7 +19,7 @@ const Episode = () => {
 
   return (
     <PageTransition>
-      <VideoCard episodes={episodes} key={episodes.id} />
+      <VideoCard episodes={episodes} key={episodes._id} />
     </PageTransition>
   );
 };

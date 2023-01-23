@@ -1,4 +1,3 @@
-import episodeposter from "../assets/episodeposter.jpg";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { Link } from "react-router-dom";
@@ -7,7 +6,8 @@ import TextTruncate from "react-text-truncate";
 import { useState } from "react";
 
 const VideoCard = ({ episodes }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [showTruncated, setShowTruncated] = useState(true);
+
   return (
     <div
       className="w-full mx-auto bg-body textShadows"
@@ -16,16 +16,16 @@ const VideoCard = ({ episodes }) => {
       <Carousel
         showThumbs={false}
         autoPlay={true}
-        transitionTime={4}
+        transitionTime={5}
         infiniteLoop={true}
         showStatus={false}
         className="w-full"
       >
         {episodes.map((episode) => (
-          <div key={episode.id} className="h-fit">
+          <div key={episode._id} className="h-fit">
             <div className="object-cover w-full without">
               <img
-                src={episodeposter}
+                src={episode.image}
                 alt={episode.title}
                 className="m-auto lg:aspect-video w-full h-full blur-0 "
                 loading="lazy"
@@ -37,16 +37,25 @@ const VideoCard = ({ episodes }) => {
                 <span>{episode.number}</span>
               </div>
               <div className="md:text-3xl text-base my-2 md:text-left text-justify textShadows md:mx-0 mx-4">
-                <TextTruncate
-                  line={2}
-                  element="span"
-                  truncateText={isExpanded ? "..less" : " ...more"}
-                  text={episode.desc}
-                  onClick={() => setIsExpanded(!isExpanded)}
-                  className="cursor-pointer"
-                />
-                <div className={`text-desc ${isExpanded ? "" : "hidden"}`}>
-                  {episode.desc}
+                {showTruncated && (
+                  <TextTruncate
+                    line={3}
+                    element="span"
+                    truncateText=" ...Read more"
+                    text={episode.desc}
+                    onClick={() => setShowTruncated(false)}
+                    className="cursor-pointer"
+                  />
+                )}
+
+                <div
+                  className={`text-desc ${
+                    showTruncated ? "hidden" : "showTruncated"
+                  } `}
+                  onClick={() => setShowTruncated(true)}
+                >
+                  {episode.desc}{" "}
+                  <span className="cursor-pointer">..Read less</span>
                 </div>
               </div>
               <div className="md:w-1/2 w-full flex justify-center md:text-left md:justify-start text-justify  text-md mb-1 md:text-lg font-semibold">
@@ -56,7 +65,7 @@ const VideoCard = ({ episodes }) => {
                 OriginalAirDate: {episode.originalAirDate}
               </div>
               <div className="flex gap-4 mt-2 justify-center w-full">
-                <Link to={`/episodevideo/${episode.id}`} key={episode.id}>
+                <Link to={`/episodevideo/${episode._id}`} key={episode._id}>
                   <button
                     className="md:text-lg text-base p-3 rounded-md flex justify-center bg-[#90a8bb] hover:bg-[#9aafc0] active:scale-90"
                     style={{ textDecoration: "none", color: "white" }}

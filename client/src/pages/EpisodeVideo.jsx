@@ -4,35 +4,32 @@ import { useParams } from "react-router-dom";
 
 const EpisodeVideo = () => {
   const [videos, setVideos] = useState({});
-  const { id } = useParams();
+  const { _id } = useParams();
 
   useEffect(() => {
     const getVideos = async () => {
       try {
         const res = await axios.get(
-          `https://api.sampleapis.com/futurama/episodes/${id}`
+          `http://localhost:1001/api/v1/getEpisode/${_id}`
         );
-        setVideos(res.data);
+        setVideos(res.data.futurama);
       } catch (error) {
         console.log(error);
       }
     };
     getVideos();
-  }, [id]);
-
-  const { number, title } = videos;
-  const src = "https://www.youtube.com/embed/PP_gho2e4Jk";
+  }, [_id]);
 
   return (
     <div className="w-full flex flex-col justify-center textShadows">
       <h1 className="text-white mt-4 w-full  md:text-5xl text-2xl">
-        Episode: {title}
+        Episode: {videos.title}
       </h1>
-      <p className="text-3xl font-bold text-white">{number}</p>
+      <p className="text-3xl font-bold text-white">{videos.number}</p>
       <iframe
         width="100%"
         height="100%"
-        src={src}
+        src={videos.video}
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

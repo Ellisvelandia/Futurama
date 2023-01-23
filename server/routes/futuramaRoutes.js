@@ -14,18 +14,18 @@ router.post("/add", async (req, res) => {
 
 // GET
 
-router.get("/getFuturama", async (req, res) => {
-  let singers;
+router.get("/getEpisode", async (req, res) => {
+  let episodes;
   try {
-    singers = await futuramaModel.find();
-    res.status(200).json({ singers });
+    episodes = await futuramaModel.find();
+    res.status(200).json({ episodes });
   } catch (error) {
     console.log(error);
   }
 });
 
 //GET REQ WITH  ID
-router.get("/getFuturama/:id", async (req, res) => {
+router.get("/getEpisode/:id", async (req, res) => {
   let futurama;
   const id = req.params.id;
   try {
@@ -36,9 +36,9 @@ router.get("/getFuturama/:id", async (req, res) => {
   }
 });
 
-//UPDATE SINGERS BY ID
+//UPDATE Episode BY ID
 
-router.put("/updateFuturama/:id", async (req, res) => {
+router.put("/updateEpisode/:id", async (req, res) => {
   const id = req.params.id;
   const { number, title, writers, originalAirDate, image, video } = req.body;
   let futurama;
@@ -59,8 +59,8 @@ router.put("/updateFuturama/:id", async (req, res) => {
   }
 });
 
-//Delete Book BY id
-router.delete("/deleteFuturama/:id", async (req, res) => {
+//Delete episode BY id
+router.delete("/deleteEpisode/:id", async (req, res) => {
   const id = req.params.id;
   try {
     await futuramaModel

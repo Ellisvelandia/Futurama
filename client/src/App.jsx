@@ -17,7 +17,7 @@ const App = () => {
           <Route path="/list" element={<ListCharacter />}></Route>
           <Route path="/card/:id" element={<Card />}></Route>
           <Route path="/episode" element={<Episode />}></Route>
-          <Route path="/episodevideo/:id" element={<EpisodeVideo />}></Route>
+          <Route path="/episodevideo/:_id" element={<EpisodeVideo />}></Route>
         </Routes>
       </AnimatePresence>
     </>
