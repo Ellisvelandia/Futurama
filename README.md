@@ -1,7 +1,5 @@
 <div id="header" align="center">
 
-
-
   <h1 align="center">Futurama App</h1>
   <img
     src="https://user-images.githubusercontent.com/100318892/214048454-5c0eb12a-5c93-4ced-bcfc-be22d673d889.png"
@@ -62,3 +60,10 @@
  
  *ejecuta del lado del server yarn start y yarn dev del lado client para mostrar el contenido de la app       
 ```
+  ---
+ 
+   <img
+    src="https://user-images.githubusercontent.com/100318892/214067484-43523fe5-2dfb-4ce4-9147-0ce1f5c31464.png"
+    width="600"
+    height="250"
+  />
