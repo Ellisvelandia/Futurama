@@ -8,7 +8,7 @@
   />
 
   <h3 align="center">
-    Futurama es una serie de dibujos animados estrenada el 28 de marzo de 1999. Fue creada por Matt Groening y actualmente está producida por Matt Groening y David X. Cohen. esta version de  web de futurama contiene informacion de sus personajes , episodios, sypnosis e informacion de sus creadores.
+    Futurama es una serie de dibujos animados estrenada el 28 de marzo de 1999. Fue creada por Matt Groening y David X. Cohen. esta version de  web de futurama contiene informacion de sus personajes , episodios, sypnosis e informacion de sus creadores.
   </h3>
 </div>
 
