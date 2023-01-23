@@ -46,7 +46,8 @@
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 ![Yarn](https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white)
----
+ https://img.shields.io/badge/Jest-C21325.svg?style=for-the-badge&logo=Jest&logoColor=white
+  ---
 
 ## Configuración:
 <p align="center">
@@ -69,9 +70,10 @@
     height="300"
   />
 --
- https://futurama-eight.vercel.app/
+  ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)  
+  https://futurama-eight.vercel.app
+--
   <footer>
-
 <img style="border-width:0" src="https://purepng.com/public/uploads/large/purepng.com-futurama-logofuturamaanimationsciencefictioncartoon-1701528604196ar57s.png"
     height="80"
     width="80"     
