@@ -7,9 +7,9 @@
     height="250"
   />
 
-  <h3 align="center">
+  <p align="center">
     Futurama es una serie de dibujos animados estrenada el 28 de marzo de 1999. Fue creada por Matt Groening y David X. Cohen. esta version de  web de futurama contiene informacion de sus personajes , episodios, sypnosis e informacion de sus creadores.
-  </h3>
+  </p>
 </div>
 
 <div id="badges" align="center">
@@ -49,7 +49,7 @@
 ---
 
 ## Configuración:
-<h3 align="center">
+<p align="center">
 
  Abre una consola, muevete al directorio del proyecto y entra a /app/, dentro de app corre:
  
@@ -60,7 +60,7 @@
  *ejecute yarn tanto en el cliente como en el servidor para iniciar la aplicación
  
  *ejecuta del lado del server yarn start y yarn dev del lado client para mostrar el contenido de la app    
-  </h3>
+  </p>
  
   ---
    <img
