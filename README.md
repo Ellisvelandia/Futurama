@@ -1,5 +1,7 @@
 <div id="header" align="center">
 
+
+
   <h1 align="center">Futurama App</h1>
   <img
     src="https://user-images.githubusercontent.com/100318892/214048454-5c0eb12a-5c93-4ced-bcfc-be22d673d889.png"
@@ -48,4 +50,10 @@
 ![Yarn](https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white)
 ---
 
+# Configuración:
+```
+ Abre una consola, muevete al directorio del proyecto y entra a /app/, dentro de app corre:
 
+ *ejecute yarn tanto en el cliente como en el servidor para iniciar la aplicación
+ *ejecuta del lado del server yarn start y yarn dev del lado client        
+```
