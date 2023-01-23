@@ -9,6 +9,6 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/v1", futuramaRoute);
 
-app.listen(() => {
+app.listen(8080, () => {
   console.log("SERVER STARTED SUCCESFULLY");
 });
