@@ -2,12 +2,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { Link } from "react-router-dom";
 import { FiPlay } from "react-icons/fi";
-import TextTruncate from "react-text-truncate";
-import { useState } from "react";
 
 const VideoCard = ({ episodes }) => {
-  const [showTruncated, setShowTruncated] = useState(true);
-
   return (
     <div
       className="w-full mx-auto bg-body textShadows"
@@ -37,26 +33,7 @@ const VideoCard = ({ episodes }) => {
                 <span>{episode.number}</span>
               </div>
               <div className="md:text-3xl text-base my-2 md:text-left text-justify textShadows md:mx-0 mx-4">
-                {showTruncated && (
-                  <TextTruncate
-                    line={3}
-                    element="span"
-                    truncateText=" ...Read more"
-                    text={episode.desc}
-                    onClick={() => setShowTruncated(false)}
-                    className="cursor-pointer"
-                  />
-                )}
-
-                <div
-                  className={`text-desc ${
-                    showTruncated ? "hidden" : "showTruncated"
-                  } `}
-                  onClick={() => setShowTruncated(true)}
-                >
-                  {episode.desc}{" "}
-                  <span className="cursor-pointer">..Read less</span>
-                </div>
+                {episode.desc}
               </div>
               <div className="md:w-1/2 w-full flex justify-center md:text-left md:justify-start text-justify  text-md mb-1 md:text-lg font-semibold">
                 Writers: {episode.writers}

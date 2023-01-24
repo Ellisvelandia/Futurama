@@ -27,6 +27,7 @@ const EpisodeVideo = () => {
       </h1>
       <p className="text-3xl font-bold text-white">{videos.number}</p>
       <iframe
+        loading="lazy"
         width="100%"
         height="100%"
         src={videos.video}
