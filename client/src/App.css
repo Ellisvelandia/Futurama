@@ -63,11 +63,15 @@ body {
 }
 
 .carousel .control-dots {
-width: 100%;
+  width: 100%;
 }
 
 @media (max-width: 678px) {
   .media {
     height: 100%;
+  }
+  .carousel .control-dots {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
