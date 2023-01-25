@@ -70,7 +70,7 @@
   />
 --
   ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)  
-  https://futurama-eight.vercel.app
+  https://futuramaweb.vercel.app/
 --
   <footer>
 <img style="border-width:0" src="https://purepng.com/public/uploads/large/purepng.com-futurama-logofuturamaanimationsciencefictioncartoon-1701528604196ar57s.png"
