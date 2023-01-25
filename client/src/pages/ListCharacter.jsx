@@ -9,9 +9,9 @@ const ListCharacter = () => {
   useEffect(() => {
     const getFuturama = async () => {
       const res = await axios.get(
-        "https://api.sampleapis.com/futurama/characters"
+        "https://futurama.onrender.com/api/v1/getCharacter"
       );
-      setSpaces(res.data);
+      setSpaces(res.data.characters);
     };
     getFuturama();
   }, []);

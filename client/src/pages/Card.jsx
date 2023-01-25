@@ -9,23 +9,24 @@ const widthAnimation = {
 };
 
 const Card = () => {
-  const { id } = useParams();
+  const { _id } = useParams();
   const [character, setCharacter] = useState({});
 
   useEffect(() => {
     const getCharacter = async () => {
       try {
         const res = await fetch(
-          `https://api.sampleapis.com/futurama/characters/${id}`
+          `https://futurama.onrender.com/api/v1/getCharacter/${_id}`
         );
         const data = await res.json();
-        setCharacter(data);
+        setCharacter(data.character);
+        console.log(data.character);
       } catch (err) {
         console.log(err);
       }
     };
     getCharacter();
-  }, [id]);
+  }, [_id]);
 
   return (
     <>
@@ -39,34 +40,32 @@ const Card = () => {
       >
         <div className="grid xl:w-[1100px] grid-cols-1 h-full md:grid-cols-2 place-items-center md:px-8 shadowbox textShadows rounded m-4 hover:bg-[#459ED3]">
           <div className="w-full flex h-[400px] justify-center mt-4">
-            {character.images && (
-              <motion.img
-                src={`${character.images.main}`}
-                alt={character.id}
-                className="rounded-lg md:h-[400px] w-[300px] object-fill"
-                initial={{ opacity: 0, y: "-100vh" }}
-                animate={{ opacity: 1, y: 0 }}
-              />
-            )}
+            <motion.img
+              src={character.image}
+              alt={character.Name}
+              className="rounded-lg md:h-[400px] w-[300px] object-fill"
+              initial={{ opacity: 0, y: "-100vh" }}
+              animate={{ opacity: 1, y: 0 }}
+            />
           </div>
           <div className="sm:mx-0 m-4">
-            {character.name && (
-              <h1 className=" text-2xl font-bold text-white my-1 md:mb-8 md:text-4xl w-full">
-                {character.name.first} {character.name.middle}{" "}
-                {character.name.last}
-              </h1>
-            )}
+            <h1 className=" text-2xl font-bold text-white my-1 md:mb-8 md:text-4xl w-full">
+              {character.Name}
+            </h1>
             <p className="text-gray-100 md:my-1 -my-2  text-2xl md:text-3xl leading-loose md:leading-relaxed">
-              Age: {character.age}
+              Age: {character.Age}
             </p>
             <p className="text-gray-100 md:my-1 -my-2  text-2xl md:text-3xl leading-loose md:leading-relaxed">
-              Gender: {character.gender}
+              Species: {character.Species}
             </p>
             <p className="text-gray-100 md:my-1 -my-2  text-2xl md:text-3xl leading-loose md:leading-relaxed">
-              Homeplanet: {character.homePlanet || "unknown"}
+              Homeplanet: {character.Planet || "unknown"}
             </p>
             <p className="text-gray-100 md:my-1 -my-2  text-2xl md:text-3xl leading-loose md:leading-relaxed">
-              Occupation: {character.occupation || "unknown"}
+              Occupation: {character.Profession || "unknown"}
+            </p>
+            <p className="text-gray-100 md:my-1 -my-2  text-2xl md:text-3xl leading-loose md:leading-relaxed">
+              Voicedby: {character.Voicedby || "unknown"}
             </p>
           </div>
           <Link

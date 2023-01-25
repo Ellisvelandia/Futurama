@@ -40,17 +40,14 @@ router.get("/getSypnosi/:id", async (req, res) => {
 
 router.put("/updateSypnosi/:id", async (req, res) => {
   const id = req.params.id;
-  const { title, poster, desc, firstEpisodeDate, name, image, description } = req.body;
+  const { title, poster, desc, firstEpisodeDate } = req.body;
   let sypnosi;
   try {
     sypnosi = await sypnosisModal.findByIdAndUpdate(id, {
       title,
       poster,
       desc,
-      firstEpisodeDate,
-      name,
-      image,
-      description
+      firstEpisodeDate
     });
     sypnosi = await sypnosi
       .save()
