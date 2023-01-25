@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const ListCard = ({ spaces }) => {
   return (
     <>
-      <div className="grid grid-cols-1 2xl:grid-cols-5 md:grid-cols-3 w-full  gap-4 p-4 place-items-center textShadows">
+      <div className="grid grid-cols-1 2xl:grid-cols-5 md:grid-cols-3 w-full  gap-4 p-4 place-items-center textShadows bg-body">
         {spaces.map((space) => (
           <Link
             to={`/card/${space._id}`}

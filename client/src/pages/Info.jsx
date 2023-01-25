@@ -39,7 +39,9 @@ const Info = () => {
             </h1>
 
             <p className="flex flex-col w-full mx-auto my-4 md:p-2">
-              <span className="text-2xl lg:text-center text-justify px-4">{data.desc}</span>
+              <span className="text-2xl lg:text-center text-justify px-4">
+                {data.desc}
+              </span>
             </p>
             <img
               src={data.poster}

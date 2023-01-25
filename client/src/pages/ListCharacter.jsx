@@ -39,7 +39,7 @@ const ListCharacter = () => {
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}
       />
-      <ListCard classname="h-full bg-body" spaces={currentPosts} />
+      <ListCard classname="h-full" spaces={currentPosts} />
     </PageTransition>
   );
 };
