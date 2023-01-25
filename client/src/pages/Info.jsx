@@ -3,56 +3,77 @@ import React from "react";
 import PageTransition from "../components/PageTransition";
 
 const Info = () => {
-  const [info, setInfo] = useState([]);
+  const [synopsis, setSynopsis] = useState([]);
+  const [creators, setCreators] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
-      const res = await fetch(
-        "https://futurama.onrender.com/api/v1/getSypnosis"
-      );
-      const data = await res.json();
-      setInfo(data.sypnosis);
-      console.log(data.sypnosis);
+      try {
+        const res1 = await fetch(
+          "https://futurama.onrender.com/api/v1/getSypnosis"
+        );
+        const data1 = await res1.json();
+        setSynopsis(data1.sypnosis);
+        const res2 = await fetch(
+          "https://futurama.onrender.com/api/v1/getCreator"
+        );
+        const data2 = await res2.json();
+        setCreators(data2.creator);
+      } catch (err) {
+        console.log(err);
+      }
     };
 
     getData();
   }, []);
   return (
     <PageTransition>
-      <div>
-        {info.map((data) => (
+      <div className="w-full flex flex-col justify-center items-center bg-body textShadows mt-2">
+        {synopsis.map((data) => (
+          <div
+            key={data._id}
+            className="w-full flex flex-col justify-center items-center mx-4 text-white font-black text-xl py-4"
+          >
+            <h1 className="text-white font-black md:text-8xl text-7xl text-center w-full p-2">
+              {data.title}
+            </h1>
+
+            <p className="flex flex-col max-w-6xl mx-auto  md:p-2 px-6">
+              <span className="text-2xl text-justify">{data.desc}</span>
+            </p>
+            <img
+              src={data.poster}
+              alt={data._id}
+              className="mt-4 px-2 md:w-1/2 rounded-3xl aspect-square"
+              loading="lazy"
+            />
+            <span className="my-2 p-2 text-2xl">
+              firstEpisodeDate: {data.firstEpisodeDate}
+            </span>
+          </div>
+        ))}
+
+        <hr className="mt-4" />
+        <span className="p-4 text-5xl font-black text-white">creators</span>
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-8 place-content-center w-full m-4 p-4 h-full">
+          {creators.map((creator) => (
             <div
-              key={data._id}
-              className="w-full flex flex-col justify-center items-center m-4 text-white font-black text-xl"
+              key={creator._id}
+              className="shadowbox rounded flex flex-col justify-center items-center text-white font-black text-xl p-4 hover:bg-[#459ED3]"
             >
-              <h1>
-                <span className="text-white font-black md:text-7xl text-5xl text-center ">
-                  {data.title}
-                </span>
-              </h1>
+              <span className="underline">{creator.name}</span>
               <img
-                src={data.poster}
-                alt={data._id}
-                className="md:-mt-6 md:-mb-8 my-4  max-w-7xl px-2 md:px-20 md:pt-20 lg:h-[450px] rounded-3xl"
+                src={creator.image}
+                alt={creator.name}
+                className="w-96 my-4 rounded-[50%] shadow-2xl bg-[#E6EFF8]"
                 loading="lazy"
               />
-              <p className="md:object-fill object-contain md:-mt-6 md:-mb-8 my-4 px-2 md:p-20 w-full text-justify text-2xl -h-56">
-                {data.desc}
+              <p className="text-justify h-full max-w-4xl">
+                {creator.description}
               </p>
-                <div className="flex items-center justify-center md:px-20 mb-2 shadow-2xl hover:bg-[#459ED3]">
-                  <div className="m-4 flex flex-col text-2xl items-center font-black h-full mt-8 w-full justify-center">
-                    <span className="underline">{data.name}</span>
-                    <img
-                      src={data.image}
-                      alt={data.name}
-                      className="w-96 my-4 rounded-[50%] shadow-2xl bg-[#E6EFF8]"
-                      loading="lazy"
-                    />
-                    <p className="text-justify h-full">{data.description}</p>
-                  </div>
-              </div>
             </div>
-        ))}
+          ))}
+        </div>
       </div>
     </PageTransition>
   );
