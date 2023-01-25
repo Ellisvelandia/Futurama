@@ -15,10 +15,10 @@ router.post("/addCharacter", async (req, res) => {
 // GET
 
 router.get("/getCharacter", async (req, res) => {
-  let episodes;
+  let characters;
   try {
-    episodes = await characterModel.find();
-    res.status(200).json({ episodes });
+    characters = await characterModel.find();
+    res.status(200).json({ characters });
   } catch (error) {
     console.log(error);
   }
