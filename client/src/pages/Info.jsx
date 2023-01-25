@@ -38,13 +38,13 @@ const Info = () => {
               {data.title}
             </h1>
 
-            <p className="flex flex-col max-w-6xl mx-auto  md:p-2 px-6">
-              <span className="text-2xl text-justify">{data.desc}</span>
+            <p className="flex flex-col w-full mx-auto my-4 md:p-2">
+              <span className="text-2xl lg:text-center text-justify px-4">{data.desc}</span>
             </p>
             <img
               src={data.poster}
               alt={data._id}
-              className="mt-4 px-2 md:w-1/2 rounded-3xl aspect-square"
+              className="mt-4 px-2 lg:w-1/2 rounded-3xl aspect-square h-screen -mb-20"
               loading="lazy"
             />
             <span className="my-2 p-2 text-2xl">

@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Header = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   return (
-    <nav className="sticky top-0 w-full h-20 flex justify-between items-center px-2 py-2 shadow-md z-10 mx-auto">
+    <nav className="sticky top-0 w-full h-20 flex items-center sm:px-0 px-8 py-2 shadow-md z-10 mx-auto">
       <div className="flex justify-start w-full 2xl:visible">
         <img
           src={logo}
@@ -15,7 +15,7 @@ const Header = () => {
           className="md:w-[150px] w-full h-28 md:p-4 invisible md:visible"
         />
       </div>
-      <ul className="flex flex-1 items-center w-full justify-center md:p-8 font-black text-white capitalize text-xl invisible md:visible drop-shadow-lg shadow-black">
+      <ul className="flex justify-end items-center w-full md:p-8 font-black text-white capitalize text-xl invisible md:visible drop-shadow-lg shadow-black">
         <motion.li whileHover={{ scale: 1.1 }} className="md:mx-2">
           <Link to="/" className="hover:text-[#459ED3]">
             Home
@@ -45,7 +45,7 @@ const Header = () => {
         />
         <GiHamburgerMenu
           color="#fff"
-          fontSize={27}
+          fontSize={30}
           className="cursor-pointer mx-auto"
           onClick={() => setToggleMenu(!toggleMenu)}
         />
