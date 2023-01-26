@@ -1,8 +1,22 @@
 import React from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
+import {
+  Route,
+  Routes,
+  useLocation,
+  BrowserRouter,
+  Link,
+  NavLink,
+} from "react-router-dom";
 import Header from "./components/Header";
 import { AnimatePresence } from "framer-motion";
-import { Card, Episode, EpisodeVideo, Home, Info, ListCharacter } from "./pages";
+import {
+  Card,
+  Episode,
+  EpisodeVideo,
+  Home,
+  Info,
+  ListCharacter,
+} from "./pages";
 import "./App.css";
 
 const App = () => {
