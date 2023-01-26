@@ -20,7 +20,6 @@ const Card = () => {
         );
         const data = await res.json();
         setCharacter(data.character);
-        console.log(data.character);
       } catch (err) {
         console.log(err);
       }
