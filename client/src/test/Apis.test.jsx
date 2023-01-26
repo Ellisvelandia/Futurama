@@ -22,7 +22,7 @@ describe("Character", () => {
     try {
       const response = await axios.get(
         "https://futurama.onrender.com/api/v1/getCharacter",
-        { timeout: 1000 }
+        { timeout: 2000 }
       );
       expect(response.status).toBe(200);
       expect(response.data).toBeTruthy();
