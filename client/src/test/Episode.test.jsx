@@ -1,27 +1,18 @@
-// import { render, act } from "@testing-library/react";
-// import axiosMock from "axios";
-// import Episode from "../pages/Episode";
+import { describe, expect, test } from "vitest";
+import axios from "axios";
 
-// describe("Episode", () => {
-//   afterEach(() => {
-//     axiosMock.get.mockClear();
-//   });
-
-//   it("should fetch episodes and set them in state", async () => {
-//     const episodes = [{ title: "episode 1" }, { title: "episode 2" }];
-//     axiosMock.get.mockResolvedValueOnce({ data: { episodes } });
-
-//     const { result, waitForNextUpdate } = render(() => Episode());
-
-//     act(() => {
-//       result.current.getCast();
-//     });
-
-//     await waitForNextUpdate();
-
-//     expect(result.current.episodes).toEqual(episodes);
-//     expect(axiosMock.get).toHaveBeenCalledWith(
-//       "https://futurama.onrender.com/api/v1//getEpisode"
-//     );
-//   });
-// });
+describe("Episode", () => {
+  test("should work Api call", async () => {
+    try {
+      const response = await axios.get(
+        "https://futurama.onrender.com/api/v1//getEpisode",
+        { timeout: 10000 }
+      );
+      expect(response.status).toBe(200);
+      expect(response.data).toBeTruthy();
+    } catch (error) {
+      console.error(error);
+      expect(error).toBeFalsy();
+    }
+  });
+});
