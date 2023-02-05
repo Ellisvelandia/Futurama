@@ -21,7 +21,7 @@ const EpisodeVideo = () => {
   }, [_id]);
 
   return (
-    <div className="w-full flex flex-col justify-center textShadows without">
+    <div className="w-full flex flex-col justify-center textShadows lg:h-[calc(100%-80px)] h-screen">
       <h1 className="text-white mt-4 w-full md:text-5xl text-2xl">
         Episode: {videos.title}
       </h1>
@@ -35,7 +35,7 @@ const EpisodeVideo = () => {
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
-        className="md:aspect-video aspect-square lg:h-[580px] lg:mt-2 mt-16 md:px-20 w-full"
+        className="md:aspect-video aspect-square lg:h-[580px] lg:mt-2 mt-16 lg:px-20 w-full"
       ></iframe>
       <div className="flex justify-center my-1">
         <Link
