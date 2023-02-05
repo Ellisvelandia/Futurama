@@ -12,6 +12,10 @@ body {
   font-family: "Playfair Display", serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .hidden {
   display: none;
 }

@@ -1,13 +1,38 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import logo from "../assets/bender.png";
 import { motion } from "framer-motion";
 
-const Header = () => {
+const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+
+  const [navState, setNavState] = useState(false);
+
+  const onNavScroll = () => {
+    if (window.scrollY > 0) {
+      setNavState(true);
+    } else {
+      setNavState(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", onNavScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onNavScroll);
+    };
+  }, []);
+
   return (
-    <nav className="sticky top-0 w-full h-20 flex items-center sm:px-0 px-8 py-2 shadow-md z-10 mx-auto">
+    <nav
+      className={
+        !navState
+          ? "sticky top-0 w-full h-20 flex items-center sm:px-0 px-8 py-2 shadow-md z-10 mx-auto"
+          : "sticky top-0 w-full h-20 flex items-center sm:px-0 px-8 py-2 z-10 shadow-md mx-auto blur-effect-dark"
+      }
+    >
       <div className="flex justify-start w-full 2xl:visible">
         <img
           src={logo}
@@ -51,15 +76,18 @@ const Header = () => {
         />
         {toggleMenu && (
           <div
-            className="menu w-full h-screen"
-            style={{ background: "rgba(0,0,0,0.80)" }}
+            className={
+              !navState
+                ? "menu w-full h-full blur-effect-dark"
+                : `${toggleMenu} absolute -top-80 left-0 right-0 w-full h-[calc(100%+80rem)] blur-effect-dark`
+            }
             onClick={() => setToggleMenu(false)}
           >
-            <ul className="font-black text-white capitalize text-2xl menu py-4">
+            <ul className="font-black text-white capitalize text-3xl menu py-4">
               <img
                 src="http://theinfosphere.org/images/4/40/Planet_Express_Logo.png"
                 alt="logoexpress"
-                className="h-28"
+                className="h-28 w-full flex items-center justify-center"
                 loading="lazy"
               />
               <li className="mx-2">
@@ -99,4 +127,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;

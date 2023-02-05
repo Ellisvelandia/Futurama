@@ -7,8 +7,8 @@ import {
   Link,
   NavLink,
 } from "react-router-dom";
-import Header from "./components/Header";
 import { AnimatePresence } from "framer-motion";
+import Navbar from "./components/Navbar";
 import {
   Card,
   Episode,
@@ -23,7 +23,7 @@ const App = () => {
   const location = useLocation();
   return (
     <>
-      <Header />
+      <Navbar />
       <AnimatePresence initial={false}>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />}></Route>

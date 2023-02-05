@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.blur-effect-theme {
+  @apply bg-white/50 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-50 opacity-100 z-[100] shadow-sm transition-all duration-300;
+}
+
+.blur-effect-dark {
+  @apply bg-[#111722] bg-clip-padding backdrop-filter backdrop-blur bg-opacity-50 opacity-100 z-[100] shadow-sm transition-all duration-300;
+}
