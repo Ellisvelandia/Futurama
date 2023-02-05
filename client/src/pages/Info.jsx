@@ -28,7 +28,7 @@ const Info = () => {
   }, []);
   return (
     <PageTransition>
-      <div className="w-full flex flex-col justify-center items-center bg-body textShadows mt-2">
+      <div className="w-full flex flex-col justify-center items-center textShadows mt-2">
         {synopsis.map((data) => (
           <div
             key={data._id}

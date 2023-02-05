@@ -35,14 +35,14 @@ const Card = () => {
         initial="initial"
         animate="animate"
         exit="exit"
-        className="grid place-content-center without media md:p-12 textShadows"
+        className="grid place-content-center without media textShadows"
       >
-        <div className="grid xl:w-[1100px] grid-cols-1 h-full md:grid-cols-2 place-items-center md:px-8 shadowbox textShadows rounded m-4 hover:bg-[#459ED3]">
+        <div className="grid xl:w-[1100px] grid-cols-1 h-full md:grid-cols-2 place-items-center md:px-8 px-0 shadowbox textShadows rounded m-4 hover:bg-[#459ED3]">
           <div className="w-full flex h-[400px] justify-center mt-4">
             <motion.img
               src={character.image}
               alt={character.Name}
-              className="rounded-lg md:h-[400px] w-[300px] object-fill"
+              className="rounded-lg md:h-[400px] sm:w-[300px] w-[calc(100%+300px)] object-fill"
               initial={{ opacity: 0, y: "-100vh" }}
               animate={{ opacity: 1, y: 0 }}
             />

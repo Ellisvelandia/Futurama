@@ -17,22 +17,22 @@ const Header = () => {
       </div>
       <ul className="flex justify-end items-center w-full md:p-8 font-black text-white capitalize text-xl invisible md:visible drop-shadow-lg shadow-black">
         <motion.li whileHover={{ scale: 1.1 }} className="md:mx-2">
-          <Link to="/" className="hover:text-[#459ED3]">
+          <Link to="/" className="hover:text-[#225370]">
             Home
           </Link>
         </motion.li>
         <motion.li className="md:mx-2" whileHover={{ scale: 1.1 }}>
-          <Link to="/info" className="hover:text-[#459ED3]">
+          <Link to="/info" className="hover:text-[#225370]">
             synopsis
           </Link>
         </motion.li>
         <motion.li whileHover={{ scale: 1.1 }} className="md:mx-2">
-          <Link to="/list" className="hover:text-[#459ED3]">
+          <Link to="/list" className="hover:text-[#225370]">
             Characters
           </Link>
         </motion.li>
         <motion.li whileHover={{ scale: 1.1 }} className="md:mx-2">
-          <Link to="/episode" className="hover:text-[#459ED3]">
+          <Link to="/episode" className="hover:text-[#225370]">
             Episodes
           </Link>
         </motion.li>
@@ -63,14 +63,14 @@ const Header = () => {
                 loading="lazy"
               />
               <li className="mx-2">
-                <Link to="/" className="hover:text-[#459ED3] cursor-pointer">
+                <Link to="/" className="hover:text-[#225370] cursor-pointer">
                   Home
                 </Link>
               </li>
               <li className="mx-2">
                 <Link
                   to="/info"
-                  className="hover:text-[#459ED3] cursor-pointer"
+                  className="hover:text-[#225370] cursor-pointer"
                 >
                   synopsis
                 </Link>
@@ -78,7 +78,7 @@ const Header = () => {
               <li className="mx-2">
                 <Link
                   to="/list"
-                  className="hover:text-[#459ED3] cursor-pointer"
+                  className="hover:text-[#225370] cursor-pointer"
                 >
                   Characters
                 </Link>
@@ -86,7 +86,7 @@ const Header = () => {
               <li className="mx-2">
                 <Link
                   to="/episode"
-                  className="hover:text-[#459ED3] cursor-pointer"
+                  className="hover:text-[#225370] cursor-pointer"
                 >
                   Episodes
                 </Link>

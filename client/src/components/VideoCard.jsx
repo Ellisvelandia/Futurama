@@ -6,7 +6,7 @@ import { FiPlay } from "react-icons/fi";
 const VideoCard = ({ episodes }) => {
   return (
     <div
-      className="w-full mx-auto bg-body textShadows"
+      className="w-full mx-auto textShadows"
       style={{ textDecoration: "none", color: "white" }}
     >
       <Carousel
@@ -23,7 +23,7 @@ const VideoCard = ({ episodes }) => {
               <img
                 src={episode.image}
                 alt={episode.title}
-                className="m-auto lg:aspect-video w-full h-full blur-0 "
+                className="m-auto lg:aspect-video w-full h-full blur-0"
                 loading="lazy"
               />
             </div>
@@ -44,7 +44,7 @@ const VideoCard = ({ episodes }) => {
               <div className="flex gap-4 mt-2 justify-center w-full">
                 <Link to={`/episodevideo/${episode._id}`} key={episode._id}>
                   <button
-                    className="md:text-lg text-base p-3 rounded-md flex justify-center bg-[#90a8bb] hover:bg-[#9aafc0] active:scale-90"
+                    className="md:text-lg text-base p-3 rounded-md flex justify-center bg-[#459ED3] hover:bg-cyan-600 active:scale-90"
                     style={{ textDecoration: "none", color: "white" }}
                   >
                     Play
