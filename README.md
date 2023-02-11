@@ -64,7 +64,7 @@
  
   ---
    <img
-    src="https://user-images.githubusercontent.com/100318892/214067484-43523fe5-2dfb-4ce4-9147-0ce1f5c31464.png"
+    src="https://user-images.githubusercontent.com/100318892/218256657-eaabadda-e56a-4812-9c0b-d542cb5add3d.png"
     width="600"
     height="300"
   />
