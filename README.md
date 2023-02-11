@@ -2,7 +2,7 @@
 
   <h1 align="center">Futurama App</h1>
   <img
-    src="https://user-images.githubusercontent.com/100318892/214048454-5c0eb12a-5c93-4ced-bcfc-be22d673d889.png"
+    src="https://user-images.githubusercontent.com/100318892/218256738-e238dcfc-9c40-4501-8718-421a12213235.png"
     width="600"
     height="250"
   />
@@ -72,6 +72,12 @@
   ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)  
   https://futuramaweb.vercel.app/
 --
+   <img
+    src="https://user-images.githubusercontent.com/100318892/218256851-80a0acea-89e9-4fca-9c4e-e953afc0f159.png"
+    width="600"
+    height="300"
+  />
+
   <footer>
 <img style="border-width:0" src="https://purepng.com/public/uploads/large/purepng.com-futurama-logofuturamaanimationsciencefictioncartoon-1701528604196ar57s.png"
     height="80"
