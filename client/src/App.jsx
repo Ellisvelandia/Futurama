@@ -9,14 +9,9 @@ import {
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Navbar from "./components/Navbar";
-import {
-  Card,
-  Episode,
-  EpisodeVideo,
-  Home,
-  Info,
-  ListCharacter,
-} from "./pages";
+import Card from "./components/characters/Card";
+import EpisodeVideo from "./components/episodes/EpisodeVideo";
+import { Episode, Home, Info, ListCharacter } from "./pages";
 import "./App.css";
 
 const App = () => {
